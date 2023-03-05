@@ -42,8 +42,8 @@ public class program{
         //4
 
         int t = 0;
-        int temp4 = i;
-        while (temp4 <= Short.MAX_VALUE){
+        int temp4 = Short.MIN_VALUE;
+        while (i > temp4){
             if(temp4 % n != 0){
                 t++;
             }
@@ -53,9 +53,9 @@ public class program{
         System.out.println("Кол-во некратных чисел - " + t);
 
         int m2[] = new int[t];
-        int temp5 = i;
+        int temp5 = Short.MIN_VALUE;
         for(int j = 0; j < t; j++){
-            while (temp5 <= Short.MAX_VALUE){
+            while (i > temp5){
                 if(temp5 % n != 0){
                     m2[j]=temp5;
                 }
